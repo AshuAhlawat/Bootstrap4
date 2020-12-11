@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ashu BS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .carousel-inner img{
+     width: 100%;
+    height: 100%;
+    }
+
+    #hero-image {
+    background: bg1.png no-repeat center;
+    background-size: cover;
+    height: 150px;
+    position: relative;
+    }
+
+   #hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+</style>
+<body data-spy="scroll" data-target=".navbar">
+<div class="container-fluid p-2 text-secondary" id="hero-image">
+    <p class="display-1 d-flex justify-content-center" id="hero-text"><span title="Pun" data-toggle="popover" data-trigger="hover" data-content="Ice Cream + I Scream">IseCream</span></p>
+</div>
+<nav class="navbar navbar-expand navbar-dark bg-dark sticky-top border border-secondary">
+    <a class="navbar-brand" href="a3.jpg">
+        <img src="a3.jpg" class="rounded-circle" height="70px" width="70px">
+    </a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link"><h4>Item 1</h4></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"><h4>Item 2</h4></a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link toggle-dropdown" data-toggle="dropdown" href="#">
+                <h4>Dropdown 1 +<span class="caret"></span></h4>
+            </a>
+
+            <div class="dropdown-menu">
+                <a class="dropdown-header">Header 1</a>
+                <a href="#" class="dropdown-item">item 1</a>
+                <a href="#" class="dropdown-item">item 2</a>
+                <a href="#" class="dropdown-item">item 3</a>
+                <span class="dropdown-header">Scroll Spy</span>
+                <a href="#car" class="dropdown-item">Images</a>
+                <a href="#accordion" class="dropdown-item">Collapsible</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a href="#end" class="nav-link ml-4 mt-1"><small>Go To Bottom</small></a>
+        </li>
+    </ul>
+        <form class="form-inline ml-auto">
+            <input type="text" class="form-control mr-sm-2" placeholder="Name 1">
+            <button type="submit" class="btn btn-secondary btn-hover">Search</button>
+        </form>
+</nav>
+<div class="carousel slide" id="car">
+    <ul class="carousel-indicators">
+        <li class="active" data-target="#car" data-slide-to="0"></li>
+        <li data-target="#car" data-slide-to="1"></li>
+        <li data-target="#car" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="carousel/c1.png">
+            <div class="carousel-caption">
+                <h3>Home</h3>
+                <p>Calm Green background</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="carousel/c2.png">
+            <div class="carousel-caption">
+                <h3>Lake</h3>
+                <p>Calm Green background</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="carousel/c3.png">
+            <div class="carousel-caption">
+                <h3>Dungeon</h3>
+                <p>Cozy Underground corridors</p>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#car" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#car" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+<div class="container-fluid p-2 bg-secondary">
+    <div id="accordion" class="">
+        <div class="card">
+            <div class="card-header bg-dark">
+                <a class="collapsed card-link text-light" data-toggle="collapse" href="#collapseOne">
+                    Collapsible Group Item #1
+                </a>
+            </div>
+            <div id="collapseOne" class="collapse" data-parent="#accordion">
+                <div class="card-body bg-secondary text-white-50">
+                    <form class="form-inline d-flex justify-content-between">
+                        <label for="demo">Enter Here :<pre> </pre></label>
+                        <div class="input-group">
+                            <input placeholder="Email" id="demo" class="form-control">
+                            <div class="input-group-append">
+                                    <span class="input-group-text">@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end float-right">
+                            <button type="button" class="form-control btn-outline-dark">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header bg-dark">
+                <a class="collapsed card-link  text-light" data-toggle="collapse" href="#collapseTwo">
+                    Collapsible Group Item #2
+                </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                <div class="card-body bg-secondary text-white-50">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox mb-4">
+                                <input type="checkbox" class="custom-control-input" id="custom1">
+                                <label class="custom-control-label" for="custom1">Custom checkbox 1</label>
+                            </div><pre>  </pre>
+                            <div class="custom-control custom-checkbox mb-4">
+                                <input type="checkbox" class="custom-control-input" id="custom2">
+                                <label class="custom-control-label" for="custom2">Custom checkbox 2</label>
+                            </div><pre>  </pre>
+                            <div class="custom-control custom-checkbox mb-4">
+                                <input type="checkbox" class="custom-control-input" id="custom3">
+                                <label class="custom-control-label" for="custom3">Custom checkbox 3</label>
+                            </div>
+                        </div>
+                    </form>
+                    <form>
+                        <div class="form-group">
+                            <label for="progress1">Progress Bar</label>
+                            <input type="range" id="progress1" class="form-control-range">
+                        </div>
+                        <div class="custom-file p-3 mb-3 bg-dark">
+                            <input type="file" class="custom-file-input" id="label1">
+                            <label class="custom-file-label" for="label1">Search File</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header bg-dark">
+                <a class="collapsed card-link text-light" data-toggle="collapse" href="#collapseThree">
+                    Collapsible Group Item #3
+                </a>
+            </div>
+            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body bg-secondary text-white-50">
+                    <form>
+                        <label for="select1">Select</label>
+                        <select multiple id="select1" class="custom-select mb-4">
+                            <option>lines 1</option>
+                            <option>lines 2</option>
+                            <option>lines 3</option>
+                            <option>lines 4</option>
+                            <option>lines 5</option>
+                            <option>lines 6</option>
+                            <option>lines 7</option>
+                            <option>lines 8</option>
+                            <option>lines 9</option>
+                            <option>lines 10</option>
+                            <option>lines 11</option>
+                        </select>
+                        <div class="custom-control custom-switch">
+                            <input id="toggle1" class="custom-control-input" type="checkbox">
+                            <label for="toggle1" class="custom-control-label">On/Off</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header bg-dark">
+                <a class="collapsed card-link text-light" data-toggle="collapse" href="#collapseFour">
+                    Collapsible Group Item #4
+                </a>
+            </div>
+            <div  id="collapseFour" class="collapse show" data-parent="#accordian">
+                <div class="card-body bg-secondary text-white-50">
+                    <span class="text-muted" data-toggle="tooltip" title="Under Progress" data-placement="bottom">...</span>
+                    <div class="toast shadow-lg" data-autohide="false">
+                        <div class="toast-header bg-dark">
+                            <strong class="mr-auto text-light">Announcement</strong>
+                            <small class="text-muted">5 mins ago</small>
+                            <button type="button" class="close ml-3 mb-1" data-dismiss="toast">&times;</button>
+                        </div>
+                        <div class="toast-body bg-secondary">
+                            This file is about to be finished
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">
+                        Open modal
+                    </button>
+                        <div class="modal" id="myModal">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <diV class="modal-content">
+                                    <div class="modal-header bg-dark">
+                                        <h4 class="text-light modal-title">Report</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body bg-secondary">
+                                            <input type="text" class="form-control" placeholder="Enter Here...">
+                                    </div>
+                                    <div class="modal-footer bg-dark">
+                                        <input type="submit" class="form-control bg-dark text-danger">
+                                    </div>
+                                </diV>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="end"></div>
+<script>
+    $(document).ready(
+        function(){
+            $('[data-toggle="popover"]').popover();
+            $('[data-toggle="tooltip"]').tooltip();
+            $('.toast').toast('show');
+        }
+    );
+    var w=screen.availWidth - 20;
+</script>
+</body>
+</html>
